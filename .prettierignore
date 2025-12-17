@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Test coverage
+coverage/
+
+# Logs
+logs/
+*.log
+
+# Database migrations
+drizzle/
+
+# Lock files
+package-lock.json
