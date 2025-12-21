@@ -1,0 +1,34 @@
+{"level":"info","message":"Server started on port 3000","service":"acquisition-api","timestamp":"2025-12-18T04:34:09.680Z"}
+{"level":"info","message":"Server started on port 3000","service":"acquisition-api","timestamp":"2025-12-18T04:34:30.244Z"}
+{"level":"info","message":"Server started on port 3000","service":"acquisition-api","timestamp":"2025-12-18T04:34:48.119Z"}
+{"level":"info","message":"Server is running on http://localhost:3000","service":"acquisition-api","timestamp":"2025-12-18T04:35:03.660Z"}
+{"level":"info","message":"Server is running on http://localhost:3000","service":"acquisition-api","timestamp":"2025-12-18T04:35:09.155Z"}
+{"level":"info","message":"Server is running on http://localhost:3000","service":"acquisition-api","timestamp":"2025-12-18T04:35:58.724Z"}
+{"level":"error","message":"Server is running on http://localhost:3000","service":"acquisition-api","timestamp":"2025-12-18T04:36:02.677Z"}
+{"level":"info","message":"Server is running on http://localhost:3000","service":"acquisition-api","timestamp":"2025-12-18T04:36:08.484Z"}
+{"level":"info","message":"hello from acquisition-api","service":"acquisition-api","timestamp":"2025-12-18T04:45:59.006Z"}
+{"level":"info","message":"::1 - - [18/Dec/2025:04:45:59 +0000] \"GET / HTTP/1.1\" 200 13 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisition-api","timestamp":"2025-12-18T04:45:59.013Z"}
+{"level":"info","message":"::1 - - [18/Dec/2025:04:45:59 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisition-api","timestamp":"2025-12-18T04:45:59.183Z"}
+{"level":"info","message":"hello from acquisition-api","service":"acquisition-api","timestamp":"2025-12-18T04:47:35.362Z"}
+{"level":"info","message":"::1 - - [18/Dec/2025:04:47:35 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisition-api","timestamp":"2025-12-18T04:47:35.364Z"}
+{"level":"info","message":"hello from acquisition-api","service":"acquisition-api","timestamp":"2025-12-18T06:55:27.373Z"}
+{"level":"info","message":"::1 - - [18/Dec/2025:06:55:27 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisition-api","timestamp":"2025-12-18T06:55:27.397Z"}
+{"level":"info","message":"::1 - - [18/Dec/2025:06:56:43 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisition-api","timestamp":"2025-12-18T06:56:43.129Z"}
+{"level":"info","message":"hello from acquisition-api","service":"acquisition-api","timestamp":"2025-12-18T06:56:51.170Z"}
+{"level":"info","message":"::1 - - [18/Dec/2025:06:56:51 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisition-api","timestamp":"2025-12-18T06:56:51.173Z"}
+{"level":"info","message":"hello from acquisition-api","service":"acquisition-api","timestamp":"2025-12-18T06:57:14.471Z"}
+{"level":"info","message":"::1 - - [18/Dec/2025:06:57:14 +0000] \"GET / HTTP/1.1\" 200 28 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisition-api","timestamp":"2025-12-18T06:57:14.484Z"}
+{"level":"info","message":"::1 - - [18/Dec/2025:06:58:24 +0000] \"POST /sign-up HTTP/1.1\" 404 27 \"-\" \"PostmanRuntime/7.37.3\"","service":"acquisition-api","timestamp":"2025-12-18T06:58:24.423Z"}
+{"level":"info","message":"::1 - - [18/Dec/2025:06:58:32 +0000] \"POST /api/sign-up HTTP/1.1\" 404 27 \"-\" \"PostmanRuntime/7.37.3\"","service":"acquisition-api","timestamp":"2025-12-18T06:58:32.613Z"}
+{"level":"info","message":"::1 - - [18/Dec/2025:07:00:01 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 16 \"-\" \"PostmanRuntime/7.37.3\"","service":"acquisition-api","timestamp":"2025-12-18T07:00:01.125Z"}
+{"level":"info","message":"User created successfully: lokesh@gmail.com","service":"acquisition-api","timestamp":"2025-12-21T07:31:53.114Z"}
+{"level":"info","message":"User signed up: lokesh@gmail.com","service":"acquisition-api","timestamp":"2025-12-21T07:31:53.123Z"}
+{"level":"info","message":"::1 - - [21/Dec/2025:07:31:53 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 112 \"-\" \"PostmanRuntime/7.37.3\"","service":"acquisition-api","timestamp":"2025-12-21T07:31:53.129Z"}
+{"level":"info","message":"User created successfully: lokesh@gmail.com","service":"acquisition-api","timestamp":"2025-12-21T07:32:43.346Z"}
+{"level":"info","message":"User signed up: lokesh@gmail.com","service":"acquisition-api","timestamp":"2025-12-21T07:32:43.349Z"}
+{"level":"info","message":"::1 - - [21/Dec/2025:07:32:43 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 113 \"-\" \"PostmanRuntime/7.37.3\"","service":"acquisition-api","timestamp":"2025-12-21T07:32:43.351Z"}
+{"level":"info","message":"User authenticated successfully: lokesh@gmail.com","service":"acquisition-api","timestamp":"2025-12-21T07:33:40.434Z"}
+{"level":"info","message":"User signed in: lokesh@gmail.com","service":"acquisition-api","timestamp":"2025-12-21T07:33:40.435Z"}
+{"level":"info","message":"::1 - - [21/Dec/2025:07:33:40 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 115 \"-\" \"PostmanRuntime/7.37.3\"","service":"acquisition-api","timestamp":"2025-12-21T07:33:40.436Z"}
+{"level":"info","message":"User signed out","service":"acquisition-api","timestamp":"2025-12-21T07:34:28.658Z"}
+{"level":"info","message":"::1 - - [21/Dec/2025:07:34:28 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 42 \"-\" \"PostmanRuntime/7.37.3\"","service":"acquisition-api","timestamp":"2025-12-21T07:34:28.659Z"}
