@@ -71,3 +71,24 @@
 {"level":"info","message":"::1 - - [21/Dec/2025:13:20:00 +0000] \"GET /health HTTP/1.1\" 429 95 \"-\" \"PostmanRuntime/7.37.3\"","service":"acquisition-api","timestamp":"2025-12-21T13:20:00.927Z"}
 {"ip":"::1","level":"warn","message":"Rate limit exceeded","path":"/health","service":"acquisition-api","timestamp":"2025-12-21T13:20:02.051Z","userAgent":"PostmanRuntime/7.37.3"}
 {"level":"info","message":"::1 - - [21/Dec/2025:13:20:02 +0000] \"GET /health HTTP/1.1\" 429 95 \"-\" \"PostmanRuntime/7.37.3\"","service":"acquisition-api","timestamp":"2025-12-21T13:20:02.053Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:15:56 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:15:56.499Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:16:26 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:16:26.926Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:16:57 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:16:57.265Z"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [23/Dec/2025:04:17:18 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"PostmanRuntime/7.37.3\"","service":"acquisition-api","timestamp":"2025-12-23T04:17:18.408Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:17:27 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:17:27.661Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:17:57 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:17:57.951Z"}
+{"level":"info","message":"User created successfully: lokeshdev@gmail.com","service":"acquisition-api","timestamp":"2025-12-23T04:18:11.188Z"}
+{"level":"info","message":"User signed up: lokeshdev@gmail.com","service":"acquisition-api","timestamp":"2025-12-23T04:18:11.202Z"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [23/Dec/2025:04:18:11 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 124 \"-\" \"PostmanRuntime/7.37.3\"","service":"acquisition-api","timestamp":"2025-12-23T04:18:11.206Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:18:28 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:18:28.369Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:18:58 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:18:58.695Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:19:29 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:19:29.025Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:19:59 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:19:59.365Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:20:29 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:20:29.681Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:21:00 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:21:00.001Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:21:30 +0000] \"GET /health HTTP/1.1\" 200 72 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:21:30.312Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:22:00 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:22:00.646Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:22:30 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:22:30.984Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:23:01 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:23:01.286Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:23:31 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:23:31.644Z"}
+{"level":"info","message":"::1 - - [23/Dec/2025:04:24:02 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-23T04:24:02.020Z"}
