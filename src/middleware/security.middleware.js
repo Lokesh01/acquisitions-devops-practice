@@ -39,12 +39,10 @@ const securityMiddleware = async (req, res, next) => {
         userAgent: req.get('User-Agent'),
       });
 
-      return res
-        .status(403)
-        .json({
-          error: 'Forbidden',
-          message: 'Automated request are not allowed.',
-        });
+      return res.status(403).json({
+        error: 'Forbidden',
+        message: 'Automated request are not allowed.',
+      });
     }
 
     if (decision.isDenied() && decision.reason.isShield()) {
