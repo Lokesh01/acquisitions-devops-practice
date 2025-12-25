@@ -318,3 +318,6 @@
 {"level":"info","message":"::1 - - [24/Dec/2025:09:35:41 +0000] \"GET /health HTTP/1.1\" 200 78 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-24T09:35:41.170Z"}
 {"level":"info","message":"::1 - - [24/Dec/2025:09:36:11 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-24T09:36:11.576Z"}
 {"level":"info","message":"::1 - - [24/Dec/2025:09:36:41 +0000] \"GET /health HTTP/1.1\" 200 78 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-24T09:36:41.913Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [25/Dec/2025:08:47:16 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-25T08:47:16.315Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [25/Dec/2025:08:47:16 +0000] \"GET /api HTTP/1.1\" 200 40 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-25T08:47:16.340Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [25/Dec/2025:08:47:16 +0000] \"GET /nonexistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisition-api","timestamp":"2025-12-25T08:47:16.359Z"}
