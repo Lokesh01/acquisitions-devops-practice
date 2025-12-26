@@ -1,0 +1,82 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+  pull_request:
+    branches:
+      - main
+      - staging
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        id: test
+        run: npm test
+        env:
+          NODE_ENV: test
+          NODE_OPTIONS: --experimental-vm-modules
+          DATABASE_URL: postgres://test:test@localhost:5432/test_db
+        continue-on-error: true
+
+      - name: Upload coverage reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-reports
+          path: coverage/
+          retention-days: 30
+
+      - name: Generate test summary
+        if: always()
+        run: |
+          if [ "${{ steps.test.outcome }}" == "success" ]; then
+            echo "### :white_check_mark: Tests Passed" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "All tests completed successfully!" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            
+            # Add coverage summary if available
+            if [ -f coverage/lcov.info ]; then
+              echo "**Coverage Report Generated**" >> $GITHUB_STEP_SUMMARY
+              echo "Coverage reports have been uploaded as artifacts." >> $GITHUB_STEP_SUMMARY
+            fi
+          else
+            echo "### :x: Tests Failed" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Some tests failed. Please check the logs for details." >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "**Next Steps:**" >> $GITHUB_STEP_SUMMARY
+            echo "1. Review the test failure logs above" >> $GITHUB_STEP_SUMMARY
+            echo "2. Run \`npm test\` locally to reproduce the issue" >> $GITHUB_STEP_SUMMARY
+            echo "3. Fix the failing tests" >> $GITHUB_STEP_SUMMARY
+            echo "4. Commit and push your changes" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Annotate test failures
+        if: steps.test.outcome == 'failure'
+        run: |
+          echo "::error::Tests failed. Please review the test output and fix the failing tests."
+          exit 1
+
+      - name: Final status check
+        if: steps.test.outcome == 'failure'
+        run: exit 1

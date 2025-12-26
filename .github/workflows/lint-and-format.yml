@@ -1,0 +1,77 @@
+name: Lint and Format
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+  pull_request:
+    branches:
+      - main
+      - staging
+
+jobs:
+  lint-and-format:
+    name: Check Code Quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        id: eslint
+        run: npm run lint
+        continue-on-error: true
+
+      - name: Run Prettier check
+        id: prettier
+        run: npm run format:check
+        continue-on-error: true
+
+      - name: Annotate ESLint issues
+        if: steps.eslint.outcome == 'failure'
+        run: |
+          echo "::error::ESLint found issues. Run 'npm run lint:fix' to automatically fix them."
+          exit 1
+
+      - name: Annotate Prettier issues
+        if: steps.prettier.outcome == 'failure'
+        run: |
+          echo "::error::Prettier formatting issues found. Run 'npm run format' to fix formatting."
+          exit 1
+
+      - name: Check overall status
+        if: steps.eslint.outcome == 'failure' || steps.prettier.outcome == 'failure'
+        run: |
+          echo "::error::Code quality checks failed. Please fix the issues before merging."
+          echo "### :x: Code Quality Check Failed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.eslint.outcome }}" == "failure" ]; then
+            echo "- **ESLint**: Failed - Run \`npm run lint:fix\` to fix issues" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **ESLint**: Passed" >> $GITHUB_STEP_SUMMARY
+          fi
+          if [ "${{ steps.prettier.outcome }}" == "failure" ]; then
+            echo "- **Prettier**: Failed - Run \`npm run format\` to fix formatting" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **Prettier**: Passed" >> $GITHUB_STEP_SUMMARY
+          fi
+          exit 1
+
+      - name: Success summary
+        if: steps.eslint.outcome == 'success' && steps.prettier.outcome == 'success'
+        run: |
+          echo "### :white_check_mark: Code Quality Check Passed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **ESLint**: Passed" >> $GITHUB_STEP_SUMMARY
+          echo "- **Prettier**: Passed" >> $GITHUB_STEP_SUMMARY
